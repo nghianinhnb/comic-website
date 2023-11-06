@@ -1,0 +1,13 @@
+node_modules/
+.idea
+.DS_Store
+.env
+uploads/
+.vscode
+public/*/
+
+yarn.lock
+
+**/*.log
+
+deploy-dev.sh
