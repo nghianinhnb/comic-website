@@ -1,6 +1,6 @@
-import { Company, Account } from "..";
+// import { Company, Account } from "..";
 
 
-Company.Account = Company.hasMany(Account, { foreignKey: 'companyId' });
+// Company.Account = Company.hasMany(Account, { foreignKey: 'companyId' });
 
-Account.Company = Account.belongsTo(Company, { foreignKey: 'companyId' });
+// Account.Company = Account.belongsTo(Company, { foreignKey: 'companyId' });

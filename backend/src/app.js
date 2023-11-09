@@ -20,3 +20,5 @@ app.use("/resources", express.static(resolve("public")));
 // Custom Middlewares
 app.use("/api/v1", apiRouter);
 app.use(errorHandler);
+
+export { app };

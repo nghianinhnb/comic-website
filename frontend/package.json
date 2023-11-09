@@ -2,7 +2,6 @@
   "name": "comic-website",
   "version": "0.1.0",
   "dependencies": {
-    "@reduxjs/toolkit": "^1.9.3",
     "@tanstack/react-query": "^4.29.1",
     "@tanstack/react-query-devtools": "^4.29.1",
     "axios": "^0.27.2",

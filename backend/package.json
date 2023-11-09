@@ -24,9 +24,7 @@
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.2.4",
     "path": "^0.12.7",
-    "qs": "^6.11.2",
-    "sequelize": "^6.30.0",
-    "sql-formatter": "^12.2.0"
+    "sequelize": "^6.30.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",

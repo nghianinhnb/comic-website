@@ -4,9 +4,8 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import GuestRoute from 'shared/components/Routes/GuestRoute';
 import PrivateRoute from 'shared/components/Routes/PrivateRoute';
 
-import LoginHomeScreen from 'pages/Auth/screens/LoginHomeScreen';
-import SignUpScreen from 'pages/Auth/screens/SignUpScreen';
-import Dashboard from 'pages/Dashboard';
+import Login from 'pages/Login';
+import Signup from 'pages/Signup';
 
 import AppToast from 'shared/components/AppToast';
 
@@ -20,10 +19,10 @@ function App() {
         <Switch>
           <Redirect exact from="/" to="/ban-lam-viec" />
 
-          <GuestRoute path="/dang-nhap" component={LoginHomeScreen} />
-          <GuestRoute path="/dang-ky" component={SignUpScreen} />
+          <GuestRoute path="/dang-nhap" component={Login} />
+          <GuestRoute path="/dang-ky" component={Signup} />
 
-          <PrivateRoute path="/ban-lam-viec" component={Dashboard} />
+          {/* <PrivateRoute path="/ban-lam-viec" component={Dashboard} /> */}
 
           <Route path="*" element={<div>404 not found</div>} />
         </Switch>

@@ -1,10 +1,6 @@
 // api/axiosClient.js
 import axios from 'axios';
-import PreferenceKeys from 'general/constants/PreferenceKeys';
-import LogHelper from 'general/helpers/LogHelper';
-import ToastHelper from 'general/helpers/ToastHelper';
-import UserHelper from 'general/helpers/UserHelper';
-import queryString from 'query-string';
+import ToastHelper from 'shared/helpers/ToastHelper';
 
 const sTag = '[AxiosClient]';
 
@@ -15,13 +11,11 @@ const axiosClient = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
   headers: {
     'content-type': 'application/json',
-  },
-  paramsSerializer: (params) => queryString.stringify(params),
+  }
 });
 
 axiosClient.interceptors.request.use(async (config) => {
-  // LogHelper.log(`${sTag} - ${config.baseURL}${config.url}, ${config.method}, ${config.method === 'post' ? JSON.stringify(config.data) : JSON.stringify(config.params)}`);
-  LogHelper.log(`${sTag} - headers: ${JSON.stringify(config.headers.common)}`);
+  console.log(`${sTag} - headers: ${JSON.stringify(config.headers.common)}`);
   return config;
 });
 
@@ -39,7 +33,6 @@ axiosClient.interceptors.response.use(
     const { status, data } = error.response || {};
 
     if (status === 401) {
-      UserHelper.signOut();
       window.location.href = '/dang-nhap';
     }
 
@@ -67,7 +60,6 @@ const removeAxiosAccessToken = () => {
 (() => {
   const isTokenValid = UserHelper.checkAccessTokenValid();
   if (isTokenValid) {
-    const token = localStorage.getItem(PreferenceKeys.accessToken);
     updateAxiosAccessToken(token);
   } else {
     UserHelper.signOut();

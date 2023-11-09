@@ -1,10 +1,9 @@
-import UserHelper from 'general/helpers/UserHelper';
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
 
 function GuestRoute(props) {
-  const isAuth = UserHelper.checkAccessTokenValid();;
+  const isAuth = false;
 
   return isAuth
     ? <Redirect to='/' />

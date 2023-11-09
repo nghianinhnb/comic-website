@@ -3,18 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 /* Custom fonts */
 
-@import './assets/font_awesome_6_pro//css/all.css';
-/* fontawesome */
-
-@import './assets/keenthemes-icons/ki.css';
-/* ki */
-
-@import './assets/flaticon2/flaticon.css';
-/* flaticon2 */
-
-@import '~perfect-scrollbar';
-/* perfect scrollbar */
-
 html,
 body {
   /* font size of root element (rem) */
@@ -35,29 +23,6 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-/* @font-face {
-  font-family: 'SFPRODISPLAYREGULAR';
-  src: local('SFPRODISPLAYREGULAR'),
-    url('assets/fonts/sf-pro-fonts/SFPRODISPLAYREGULAR.OTF') format('truetype');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'SFPRODISPLAYBOLD';
-  src: local('SFPRODISPLAYBOLD'),
-    url('assets/fonts/sf-pro-fonts/SFPRODISPLAYBOLD.OTF') format('truetype');
-  font-weight: bold;
-} */
-
-.font-sfpro-regular {
-  /* font-family: SFPRODISPLAYREGULAR; */
-}
-
-.font-sfpro-bold {
-  /* font-family: SFPRODISPLAYBOLD; */
-  font-weight: bold;
 }
 
 .dropdown-toggle.btn:after {
